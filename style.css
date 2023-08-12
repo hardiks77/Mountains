@@ -1,0 +1,312 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.nav-bar {
+  display: flex;
+  padding: 20px 400px;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-bar span {
+  padding-right: 40px;
+  text-decoration: underline;
+
+  font-size: 16px;
+  font-family: "Lato";
+  color: rgb(254, 254, 255);
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.667;
+
+  z-index: 112;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.pages {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-one {
+  background-image: url(./images/first\ page.png);
+}
+.page-two {
+  position: relative;
+  background-image: url(./images/secong\ page.png);
+}
+.page-three {
+  background-image: url(./images/thirdpage.png);
+  position: relative;
+}
+.page-three-two {
+  background-image: url(./images/thirdpagetwo.png);
+  position: relative;
+}
+
+.carousel-outer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(99, 118, 157, 0.9);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* 
+.carousel-container {
+  width: 80%;
+  overflow: hidden;
+} */
+
+.carousel-track {
+  display: flex;
+  max-width: 500px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .carousel-slide {
+  flex: 0 0 25%;
+  margin-right: 20px;
+} */
+
+.carousel-container {
+  width: 50%;
+  overflow: hidden;
+  display: grid;
+  border-radius: 5px;
+  padding: 20px;
+  grid-template-columns: repeat(6, 90%);
+}
+.carousel-container .carousel-slide.active {
+  transform: scale(1) translateX(-0%);
+}
+.carousel-container .carousel-slide {
+  width: 100%;
+  transform: translateX(-0%) scale(0.9);
+  border-radius: 5px;
+  transition: all 0.7s ease;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+
+  align-items: center;
+  padding: 10px;
+  height: 200px;
+}
+
+.carousel-button {
+  border-radius: 50%;
+  background-color: rgba(254, 254, 255, 0.8);
+}
+
+.history-para {
+  font-size: 16px;
+  font-family: "Lato";
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: left;
+  position: absolute;
+  left: 393.312px;
+  top: 1110.34px;
+  width: 813px;
+  height: 63px;
+  z-index: 84;
+}
+
+.nav-two {
+  background-color: aliceblue;
+}
+
+.nav-two span {
+  color: rgb(1, 1, 41);
+}
+
+.img-nav {
+  display: flex;
+}
+
+.nav-p {
+  margin-top: 7px;
+}
+.img-nav p {
+  font-weight: 800;
+  font-family: "Bebas";
+  color: rgb(77, 77, 77);
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  z-index: 96;
+}
+
+.nav-p-one {
+  font-size: 13px;
+  color: rgb(77, 77, 77);
+}
+.nav-p-two {
+  font-size: 14.4px;
+  color: rgb(1, 1, 48);
+}
+
+.history-outer {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  padding-left: 25%;
+}
+
+.history-outer h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 164px;
+  font-family: "Oswald";
+  color: rgba(65, 79, 107, 0.502);
+  font-weight: bold;
+}
+
+.history-outer h2 {
+  font-size: 27px;
+  font-family: "Oswald";
+  color: rgba(2, 16, 43, 0.502);
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+.blank-box {
+  width: 25px;
+  height: 25px;
+  border-radius: 2px;
+  background-color: rgba(65, 79, 107, 0.502);
+}
+
+.history-para {
+  position: absolute;
+  top: 30%;
+  width: 40%;
+  left: 30%;
+
+  font-size: 14px;
+  font-family: "Lato";
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.climb-para {
+  margin-left: 20px;
+  width: 45%;
+  font-size: 16px;
+  font-family: "Lato";
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.climb-outer {
+  width: 100%;
+  background-color: white;
+}
+
+.mountains {
+  background-color: rgb(65, 79, 107);
+  color: white;
+  padding: 15px;
+  padding-left: 18%;
+}
+
+.mountains span {
+  cursor: pointer;
+  font-family: "Oswald";
+  color: rgb(176, 180, 190);
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 16px 20px;
+  margin: 0 10px;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(65, 79, 107);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 13px;
+}
+
+footer span {
+  font-size: 16px;
+  font-family: "Lato";
+  color: rgb(99, 118, 157);
+  font-style: italic;
+}
+
+.mountain-active {
+  background-color: rgb(176, 180, 190);
+
+  color: rgb(65, 79, 107) !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.schedule-div {
+  position: absolute;
+  border-radius: 2px;
+  top: 35%;
+  left: 20%;
+  width: 350px;
+  padding: 30px;
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.702;
+  padding-top: 0;
+}
+
+.schedule-div h1 {
+  font-size: 34px;
+  font-family: "Oswald";
+  color: rgb(65, 79, 107);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.schedule-date {
+  font-size: 19px;
+  font-family: "Lato";
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: left;
+  margin-right: 40px;
+}
+.schedule-descp {
+  font-size: 19px;
+  font-family: "Lato";
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: left;
+}
+
+#history-btn {
+  cursor: pointer;
+}
+
+#team-btn {
+  cursor: pointer;
+}
